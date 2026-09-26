@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taskcade — Get stuff done. Have fun.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-pink"></div>
+  <div class="ambient ambient-blue"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Taskcade home"><span class="brand-mark">✦</span> TASKCADE</a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a class="active" href="#play">PLAY</a>
+      <a href="#how-it-works">HOW IT WORKS</a>
+      <a href="#stats">MACHINE</a>
+      <a href="#marketplace">MARKET</a>
+    </nav>
+    <button class="avatar-button" aria-label="Open profile menu"><span>BR</span><i></i></button>
+  </header>
+
+  <main id="top">
+    <section class="hero" id="play">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> ARCADE MODE: ONLINE</div>
+        <h1>Get stuff done.<br><em>Have fun.</em></h1>
+        <p>Turn your to-do list into a game. Add your tasks, grab a prize, and level up your day.</p>
+        <div class="hero-actions">
+          <button class="primary-btn" id="scroll-to-machine">PLAY THE CLAW <span>→</span></button>
+          <button class="text-btn" id="show-how">HOW IT WORKS <span>↗</span></button>
+        </div>
+        <div class="mini-stats" id="stats">
+          <div><strong id="tasks-in-machine">5</strong><span>PRIZES IN MACHINE</span></div>
+          <div><strong id="tasks-done">0</strong><span>TASKS COMPLETED</span></div>
+          <div><strong id="streak">1</strong><span>DAY STREAK</span></div>
+          <div><strong id="xp">0</strong><span>XP EARNED</span></div>
+        </div>
+        <div class="goal-card" id="goal-card"><div class="goal-icon">✹</div><div class="goal-copy"><span>NEXT PRIZE GOAL</span><strong>Golden Claw Skin</strong><p><b id="goal-xp">0</b> / 500 XP</p><div class="goal-track"><i id="goal-progress"></i></div></div><span class="goal-badge">500 XP</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="spark spark-a">✦</div><div class="spark spark-b">✧</div><div class="spark spark-c">✦</div>
+        <div class="coin coin-a">$</div><div class="coin coin-b">✦</div>
+        <div class="arcade-orb"><span>✦</span></div>
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+      </div>
+    </section>
+
+    <section class="machine-section" aria-labelledby="machine-title">
+      <div class="section-heading">
+        <div><div class="eyebrow">STEP 01 / 03</div><h2 id="machine-title">Pick your next <em>mission.</em></h2></div>
+        <div class="machine-score"><span>HIGH SCORE</span><strong>12,480</strong><b>+ 240 TODAY</b></div>
+      </div>
+
+      <div class="machine-layout">
+        <div class="claw-machine" id="claw-machine">
+          <div class="machine-top"><span class="machine-logo">TASKCADE</span><span class="machine-lights"><i></i><i></i><i></i><i></i><i></i></span><span class="machine-label">PRIZE PICKER</span></div>
+          <div class="machine-window">
+            <div class="glass-shine"></div>
+            <div class="claw-rail"><div class="claw-rig" id="claw-rig"><div class="claw-cable" id="claw-cable"></div><div class="claw"><div class="claw-grip claw-left"></div><div class="claw-grip claw-right"></div><div class="claw-knuckle"></div></div></div></div>
+            <div class="prize-pit" id="prize-pit"></div>
+            <div class="window-grid"></div>
+          </div>
+          <div class="machine-base"><div class="machine-control"><div class="joystick-control" id="claw-control" aria-label="Use the left and right arrow keys to move the claw."><span class="joystick"><i></i></span><span>ARROWS<br>TO MOVE</span></div><button class="start-button" id="pick-task">DROP CLAW <span>↗</span></button><span class="control-hint">← MOVE →, THEN DROP</span></div><div class="machine-coin-slot">INSERT<br><b>✦</b><br>COIN</div></div>
+        </div>
+        <aside class="mission-card" id="mission-card">
+          <div class="card-label">YOUR CURRENT MISSION <span>✦</span></div>
+          <div class="mission-icon" id="mission-icon">✦</div>
+          <h3 id="mission-title">Ready when you are.</h3>
+          <p id="mission-description">Press the button to let the claw choose your next task.</p>
+          <div class="mission-meta"><span id="mission-tag">PLAY TO PICK</span><span id="mission-xp">+ ??? XP</span></div>
+          <button class="complete-button" id="complete-task" disabled>MARK AS COMPLETE <span>✓</span></button>
+          <button class="skip-button" id="skip-task">SKIP THIS ONE <span>↻</span></button>
+        </aside>
+      </div>
+    </section>
+
+    <section class="task-input-section"><div><div class="eyebrow">BUILD YOUR MACHINE</div><h2>Add a new <em>prize.</em></h2></div><form id="task-form"><input id="task-input" aria-label="New task" maxlength="48" placeholder="e.g. Finish chemistry notes" autocomplete="off"/><select id="task-type" aria-label="Task type"><option value="focus">FOCUS</option><option value="life">LIFE</option><option value="creative">CREATE</option><option value="school">SCHOOL</option><option value="health">HEALTH</option><option value="home">HOME</option><option value="social">SOCIAL</option></select><button class="primary-btn" type="submit">ADD TO CLAW <span>+</span></button></form></section>
+
+    <section class="marketplace-section" id="marketplace" aria-labelledby="marketplace-title">
+      <div class="marketplace-heading"><div><div class="eyebrow">THE REWARD SHOP</div><h2 id="marketplace-title">Spend your <em>XP.</em></h2><p>Turn completed tasks into upgrades, boosts, and bragging rights.</p></div><div class="wallet"><span>YOUR WALLET</span><strong><b id="shop-xp">0</b> XP</strong></div></div>
+      <div class="shop-grid" id="shop-grid">
+        <article class="shop-item"><div class="item-art item-art-pink">✦</div><div class="item-copy"><span class="item-type">COSMETIC</span><h3>Neon Nameplate</h3><p>Give your profile a brighter arcade glow.</p><button class="buy-button" data-item="nameplate" data-cost="250">BUY FOR 250 XP <span>↗</span></button></div></article>
+        <article class="shop-item"><div class="item-art item-art-yellow">⚡</div><div class="item-copy"><span class="item-type">BOOST</span><h3>Lucky Drop</h3><p>Your next claw hit gets a wider target zone.</p><button class="buy-button" data-item="lucky-drop" data-cost="400">BUY FOR 400 XP <span>↗</span></button></div></article>
+        <article class="shop-item"><div class="item-art item-art-cyan">♥</div><div class="item-copy"><span class="item-type">REWARD</span><h3>Snack Break</h3><p>Unlock a guilt-free 15 minute reset for your next win.</p><button class="buy-button" data-item="snack-break" data-cost="600">BUY FOR 600 XP <span>↗</span></button></div></article>
+      </div>
+    </section>
+
+    <section class="how-section" id="how-it-works">
+      <div class="eyebrow">THE LOOP</div><h2>Make your list. <em>Play your day.</em></h2>
+      <div class="steps"><div class="step"><span>01</span><h3>Drop in tasks</h3><p>Add the things you want to get done, big or small.</p></div><div class="step"><span>02</span><h3>Grab a prize</h3><p>Move the claw, then drop it on your next mission.</p></div><div class="step"><span>03</span><h3>Cash in XP</h3><p>Complete it, earn points, and watch your machine stats climb.</p></div></div>
+    </section>
+  </main>
+  <footer><span>© 2025 TASKCADE</span><span>BUILT FOR THE BUSY &amp; BOLD</span><span>LEVEL UP YOUR EVERYDAY <b>✦</b></span></footer>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
