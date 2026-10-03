@@ -51,8 +51,8 @@
 
     <section class="machine-section" aria-labelledby="machine-title">
       <div class="section-heading">
-        <div><div class="eyebrow">STEP 01 / 03</div><h2 id="machine-title">Pick your next <em>mission.</em></h2></div>
-        <div class="machine-score"><span>HIGH SCORE</span><strong>12,480</strong><b>+ 240 TODAY</b></div>
+      <div><div class="eyebrow">YOUR NEXT MOVE</div><h2 id="machine-title">Pick your next <em>mission.</em></h2></div>
+        <div class="machine-score"><span>HIGH SCORE</span><strong id="high-score">0</strong><b id="today-score">+ 0 TODAY</b></div>
       </div>
 
       <div class="machine-layout">
@@ -78,14 +78,16 @@
       </div>
     </section>
 
-    <section class="task-input-section"><div><div class="eyebrow">BUILD YOUR MACHINE</div><h2>Add a new <em>prize.</em></h2></div><form id="task-form"><input id="task-input" aria-label="New task" maxlength="48" placeholder="e.g. Finish chemistry notes" autocomplete="off"/><select id="task-type" aria-label="Task type"><option value="focus">FOCUS</option><option value="life">LIFE</option><option value="creative">CREATE</option><option value="school">SCHOOL</option><option value="health">HEALTH</option><option value="home">HOME</option><option value="social">SOCIAL</option></select><button class="primary-btn" type="submit">ADD TO CLAW <span>+</span></button></form></section>
+    <section class="task-input-section"><div><div class="eyebrow">BUILD YOUR MACHINE</div><h2>Add a new <em>prize.</em></h2></div><form id="task-form"><input id="task-input" aria-label="New task" maxlength="48" placeholder="e.g. Finish chemistry notes" autocomplete="off"/><select id="task-type" aria-label="Task type"><option value="focus">FOCUS</option><option value="life">LIFE</option><option value="creative">CREATE</option><option value="school">SCHOOL</option><option value="health">HEALTH</option><option value="home">HOME</option><option value="social">SOCIAL</option></select><button class="primary-btn" type="submit">ADD TO CLAW <span>+</span></button><button class="clear-button" id="clear-tasks" type="button">CLEAR TASKS <span>×</span></button></form></section>
 
     <section class="marketplace-section" id="marketplace" aria-labelledby="marketplace-title">
       <div class="marketplace-heading"><div><div class="eyebrow">THE REWARD SHOP</div><h2 id="marketplace-title">Spend your <em>XP.</em></h2><p>Turn completed tasks into upgrades, boosts, and bragging rights.</p></div><div class="wallet"><span>YOUR WALLET</span><strong><b id="shop-xp">0</b> XP</strong></div></div>
+      <div class="shelf" id="shelf"><div class="shelf-heading"><span>YOUR ARCADE SHELF</span><small>COLLECTED REWARDS</small></div><div class="shelf-slots"><div class="shelf-slot" data-shelf-item="golden-claw"><span>✹</span><b>GOLDEN CLAW</b></div><div class="shelf-slot" data-shelf-item="nameplate"><span>✦</span><b>NEON SIGN</b></div><div class="shelf-slot" data-shelf-item="lucky-drop"><span>⚡</span><b>LUCKY DROP</b></div><div class="shelf-slot" data-shelf-item="snack-break"><span>♥</span><b>SNACK BREAK</b></div><div class="shelf-slot" data-shelf-item="focus-mode"><span>◎</span><b>FOCUS MODE</b></div></div></div>
       <div class="shop-grid" id="shop-grid">
-        <article class="shop-item"><div class="item-art item-art-pink">✦</div><div class="item-copy"><span class="item-type">COSMETIC</span><h3>Neon Nameplate</h3><p>Give your profile a brighter arcade glow.</p><button class="buy-button" data-item="nameplate" data-cost="250">BUY FOR 250 XP <span>↗</span></button></div></article>
+        <article class="shop-item"><div class="item-art item-art-pink">✦</div><div class="item-copy"><span class="item-type">COSMETIC</span><h3>Neon Shelf Sign</h3><p>Light up your arcade shelf with a bright personal sign.</p><button class="buy-button" data-item="nameplate" data-cost="250">BUY FOR 250 XP <span>↗</span></button></div></article>
         <article class="shop-item"><div class="item-art item-art-yellow">⚡</div><div class="item-copy"><span class="item-type">BOOST</span><h3>Lucky Drop</h3><p>Your next claw hit gets a wider target zone.</p><button class="buy-button" data-item="lucky-drop" data-cost="400">BUY FOR 400 XP <span>↗</span></button></div></article>
         <article class="shop-item"><div class="item-art item-art-cyan">♥</div><div class="item-copy"><span class="item-type">REWARD</span><h3>Snack Break</h3><p>Unlock a guilt-free 15 minute reset for your next win.</p><button class="buy-button" data-item="snack-break" data-cost="600">BUY FOR 600 XP <span>↗</span></button></div></article>
+        <article class="shop-item"><div class="item-art item-art-yellow">✹</div><div class="item-copy"><span class="item-type">GOAL REWARD</span><h3>Golden Claw Skin</h3><p>Make the claw itself shine after reaching your 500 XP goal.</p><button class="buy-button" data-item="golden-claw" data-cost="500">BUY FOR 500 XP <span>↗</span></button></div></article>
       </div>
     </section>
 
